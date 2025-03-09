@@ -1,0 +1,175 @@
+{
+  "info": {
+    "name": "TaskBoardApp API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Tags",
+      "item": [
+        {
+          "name": "Get All Tags",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/tags"
+          }
+        },
+        {
+          "name": "Get Tag By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/tags/:id"
+          }
+        },
+        {
+          "name": "Add Tag",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/tags"
+          }
+        },
+        {
+          "name": "Update Tag",
+          "request": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/tags/:id"
+          }
+        },
+        {
+          "name": "Delete Tag",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/tags/:id"
+          }
+        }
+      ]
+    },
+    {
+      "name": "History Logs",
+      "item": [
+        {
+          "name": "Get All History Logs",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/historylogs"
+          }
+        },
+        {
+          "name": "Get History Log By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/historylogs/:id"
+          }
+        },
+        {
+          "name": "Add History Log",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/historylogs"
+          }
+        },
+        {
+          "name": "Update History Log",
+          "request": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/historylogs/:id"
+          }
+        },
+        {
+          "name": "Delete History Log",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/historylogs/:id"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "item": [
+        {
+          "name": "Get All Columns",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/columns"
+          }
+        },
+        {
+          "name": "Get Column By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/columns/:id"
+          }
+        },
+        {
+          "name": "Add Column",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/columns"
+          }
+        },
+        {
+          "name": "Update Column",
+          "request": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/columns/:id"
+          }
+        },
+        {
+          "name": "Delete Column",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/columns/:id"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "item": [
+        {
+          "name": "Get All Cards",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/cards"
+          }
+        },
+        {
+          "name": "Get Card By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/cards/:id"
+          }
+        },
+        {
+          "name": "Add Card",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/cards"
+          }
+        },
+        {
+          "name": "Update Card",
+          "request": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/cards/:id"
+          }
+        },
+        {
+          "name": "Delete Card",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/cards/:id"
+          }
+        },
+        {
+          "name": "Swap Card",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/cards/swap"
+          }
+        }
+      ]
+    }
+  ]
+}

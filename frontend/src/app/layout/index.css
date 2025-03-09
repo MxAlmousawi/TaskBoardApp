@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  * {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  * {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  * {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  * {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 200px) {
+  * {
+    font-size: 0.3rem;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff724c #1e1e1e;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ff724c;
+  border-radius: 10px;
+  border: 2px solid #1e1e1e;
+}
+
+.ant-picker-dropdown{
+    z-index: 99999;
+}
