@@ -5,13 +5,12 @@ import Tag from "../models/Tag.js";
 const connectDb = async () => {
   try {
     await sequelize.authenticate();
+    await sequelize.sync({ alter: true });
     console.log("Database connected!");
 
     const isEmpty = await Tag.count()
     if (isEmpty === 0) {
       await seedDatabase();
-    } else {
-      await sequelize.sync({ force: false });
     }
   } catch (err) {
     console.log("Database connection failed!");

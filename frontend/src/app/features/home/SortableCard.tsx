@@ -29,6 +29,17 @@ const SortableCard = ({ card, id }: Props) => {
     opacity: isDragging ? 0.5 : 1,
     zIndex: isDragging ? 999 : 1,
   };
+  
+  if (card.isPlaceholder) {
+    return (
+      <Box
+        ref={setNodeRef}
+        style={style}
+        {...attributes}
+        {...listeners}
+      ></Box>
+    );
+  }
 
   return (
     <Box
@@ -36,7 +47,6 @@ const SortableCard = ({ card, id }: Props) => {
       style={style}
       {...attributes}
       {...listeners}
-      sx={{ display: card.isPlaceholder ? "none" : "block" }}
     >
       <Paper
         elevation={2}

@@ -25,7 +25,6 @@ const useKanbanBoard = () => {
   const [activeCard, setActiveCard] = useState<any>(null);
   const [_activeColumnId, setActiveColumnId] = useState<any>(null);
 
-  // Helper: Re-insert a hidden placeholder into any column that has no real cards.
   const ensurePlaceholders = (cols: any[]) => {
     return cols.map((col) => {
       const realCards = col.cards.filter((card: any) => !card.isPlaceholder);
@@ -37,6 +36,7 @@ const useKanbanBoard = () => {
               id: `placeholder-${col.column.id}`,
               title: "Add Card",
               isPlaceholder: true,
+              
             },
           ],
         };
@@ -45,7 +45,6 @@ const useKanbanBoard = () => {
     });
   };
 
-  // When data loads, inject placeholders into empty columns.
   useEffect(() => {
     if (data) {
       const updatedColumns = ensurePlaceholders(data);
@@ -74,7 +73,6 @@ const useKanbanBoard = () => {
 
   const [isDraggingInProgress, setIsDraggingInProgress] = useState(false);
 
-  // Helper: Find a card by its ID (ignoring placeholders)
   const findCardById = (cardId: string): any => {
     for (const col of columns) {
       const card = col.cards.find(
@@ -86,7 +84,6 @@ const useKanbanBoard = () => {
     return null;
   };
 
-  // Helper: Find the column index that contains a non-placeholder card with the given id.
   const findColumnIndexByCardId = (cardId: string): any => {
     for (let i = 0; i < columns.length; i++) {
       if (

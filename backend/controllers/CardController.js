@@ -57,7 +57,7 @@ export const addCard = asyncHandler(async (req, res) => {
 
   const card = await Card.create({
     ...req.body,
-    prevCardId: lastCard.id,
+    prevCardId: lastCard?.id || null,
     nextCardId: null,
   });
   if (lastCard) {
